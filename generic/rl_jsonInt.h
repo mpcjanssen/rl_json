@@ -13,7 +13,6 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#include <endian.h>
 #include <tclTomMath.h>
 #if TIP445_SHIM
 #define Tcl_InitStringRep
@@ -279,8 +278,6 @@ void foreach_state_free(struct foreach_state* state);
 #include "dedup.h"
 
 // CBOR private headers:
-int cbor_init(Tcl_Interp* interp, struct interp_cx* l);
-void cbor_release(Tcl_Interp* interp);
 
 // Polyfill
 #ifndef Tcl_GetBytesFromObj

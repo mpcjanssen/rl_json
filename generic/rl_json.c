@@ -4191,7 +4191,6 @@ DLLEXPORT int Rl_json_Init(Tcl_Interp* interp) //{{{
 		Tcl_CreateObjCommand(interp, NS "::checkmem", checkmem, l, NULL);
 	}
 
-	if (TCL_OK != cbor_init(interp, l)) return TCL_ERROR;
 
 	if (TCL_OK != _setdir(interp)) return TCL_ERROR;
 
